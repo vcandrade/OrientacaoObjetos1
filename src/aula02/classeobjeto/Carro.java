@@ -1,4 +1,4 @@
-package aula02.classe;
+package aula02.classeobjeto;
 
 public class Carro {
 
@@ -8,22 +8,21 @@ public class Carro {
 	int ano;
 	String placa;
 	String cor;
-	
+
 	// métodos da classe Carro
 	public void ligar() {
-		
-	}
-	
-	public void desligar() {
-		
-	}
-	
-	public void acelerar() {
-		
-	}
-	
-	public void frear() {
-		
-	}
- }
 
+	}
+
+	public void desligar() {
+
+	}
+
+	public void acelerar() {
+
+	}
+
+	public void frear() {
+
+	}
+}
