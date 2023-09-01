@@ -28,11 +28,11 @@ public class CarroTeste {
 		carro3.placa = "XYZ-5555";
 		carro3.cor = "Preto";
 
-		// invocaÃ§Ã£o dos mÃ©todos de cada carro
+		// invocação dos métodos de cada carro
 		carro2.ligar();
 		carro1.acelerar();
 		carro1.acelerar();
-		
+
 		carro1.frear();
 		carro1.frear();
 
@@ -42,12 +42,3 @@ public class CarroTeste {
 		System.out.println(carro3);
 	}
 }
-
-
-
-
-
-
-
-
-

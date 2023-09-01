@@ -11,16 +11,16 @@ public class Carro {
 	boolean ligado = false;
 	int velocidade = 0;
 
-	// m�todos da classe Carro
+	// m�todos da classe Carro
 	public void ligar() {
-		
-		if(!ligado) {
-			
+
+		if (!ligado) {
+
 			ligado = true;
 			System.out.println(marca + " " + modelo + " está ligando.");
-		
+
 		} else {
-			
+
 			System.out.println(marca + " " + modelo + " já encontra-se ligado.");
 		}
 	}
@@ -45,12 +45,5 @@ public class Carro {
 	public String toString() {
 		return "Carro [modelo=" + modelo + ", marca=" + marca + ", ano=" + ano + ", placa=" + placa + ", cor=" + cor
 				+ "]";
-	}	
+	}
 }
-
-
-
-
-
-
-
