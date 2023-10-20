@@ -8,6 +8,7 @@ public class Pessoa {
 	private String email;
 	private String estadoCivil;
 	private Endereco endereco;
+	
 
 	public Pessoa(String nome, String dataNascimento, String sexo, String email, String estadoCivil,
 			Endereco endereco) {
