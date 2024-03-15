@@ -10,7 +10,7 @@ public class Carro {
 	String cor;
 
 	// declarar os métodos da classe
-	public void ligar() {
+	public void ligarCarro() {
 
 	}
 
@@ -18,7 +18,7 @@ public class Carro {
 
 	}
 
-	public void acelerar() {
+	public void aumentarVelocidade() {
 
 	}
 
