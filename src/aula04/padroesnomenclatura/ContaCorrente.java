@@ -1,6 +1,6 @@
-package aula04;
+package aula04.padroesnomenclatura;
 
-public class Conta {
+public class ContaCorrente {
 
 	int numeroConta;
 	double saldo;

@@ -1,4 +1,4 @@
-package aula04;
+package aula04.padroesnomenclatura;
 
 public class Teste {
 
