@@ -6,13 +6,6 @@ public class ContaBancaria {
 	private String titular;
 	private double saldo;
 
-	public ContaBancaria(int numeroConta, String titular, double saldo) {
-
-		this.numeroConta = numeroConta;
-		this.titular = titular;
-		this.saldo = saldo;
-	}
-
 	public ContaBancaria(int numeroConta, String titular) {
 
 		this.numeroConta = numeroConta;
@@ -58,12 +51,15 @@ public class ContaBancaria {
 	public int getNumeroConta() {
 		return numeroConta;
 	}
-
 	public String getTitular() {
 		return titular;
 	}
 
 	public void setTitular(String titular) {
-		this.titular = titular;
+
+		if (!titular.equals("")) {
+
+			this.titular = titular;
+		}
 	}
 }
