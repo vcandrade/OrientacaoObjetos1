@@ -18,13 +18,16 @@ public class Funcionario {
 	public void alterarDiaFolga(DiaSemana novoDiaFolga) {
 
 		this.folga = novoDiaFolga;
+		System.out.println("Dia de folga alterado.");
 	}
 
 	public void imprimirDadosFuncionario() {
 
+		System.out.println("======================================");
 		System.out.println("Registro: " + this.registro);
 		System.out.println("Nome: " + this.nome);
 		System.out.println("CPF: " + this.cpf);
 		System.out.println("Dia da Folga: " + this.folga.getDiaNumerico() + " / " + this.folga.getDiaExtenso());
+		System.out.println("======================================");
 	}
 }
