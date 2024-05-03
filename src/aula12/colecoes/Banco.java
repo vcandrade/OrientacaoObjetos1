@@ -35,7 +35,7 @@ public class Banco {
 			}
 		}
 
-		System.out.println("Conta inesxistente.");
+		System.out.println("Conta inexistente.");
 	}
 
 	public void verificarSaldo(int numeroConta) {
@@ -49,7 +49,7 @@ public class Banco {
 			}
 		}
 
-		System.out.println("Conta inesxistente.");
+		System.out.println("Conta inexistente.");
 	}
 
 	public void depositarConta(int numeroConta, double valor) {
@@ -63,7 +63,7 @@ public class Banco {
 			}
 		}
 
-		System.out.println("Conta inesxistente.");
+		System.out.println("Conta inexistente.");
 	}
 
 	public void sacarConta(int numeroConta, double valor) {
@@ -77,7 +77,7 @@ public class Banco {
 			}
 		}
 
-		System.out.println("Conta inesxistente.");
+		System.out.println("Conta inexistente.");
 	}
 
 	public void listarTodasContas() {
