@@ -26,23 +26,39 @@ public class Banco {
 
 	public void removerConta(int numeroConta) {
 
-		for (int i = 0; i < this.listaContas.size(); i++) {
-
-			ContaBancaria cb = this.listaContas.get(i);
+		for (ContaBancaria cb : this.listaContas) {
 
 			if (cb.getNumero() == numeroConta) {
 
 				this.listaContas.remove(cb);
-				System.out.println("Conta " + numeroConta + " removida com sucesso.");
 
+				System.out.println("Conta " + numeroConta + " removida com sucesso.");
 				return;
 			}
 		}
 
-		System.out.println("Conta não encontrada.");
+		System.out.println("Conta " + numeroConta + " não encontrada.");
 	}
 
-	public void realizarSaque(int numeroConta, double valor) {
+	public void verificarSaldoConta(int numeroConta) {
+
+		for (ContaBancaria cb : listaContas) {
+
+			if (cb.getNumero() == numeroConta) {
+
+				System.out.println("===============================");
+				System.out.println("CNPJ: " + this.cnpj);
+				System.out.println("Nome: " + this.nome);
+
+				cb.imprimirSaldo();
+				return;
+			}
+		}
+
+		System.out.println("Conta " + numeroConta + " não encontrada.");
+	}
+
+	public void realizarSaqueConta(int numeroConta, double valor) {
 
 		for (ContaBancaria cb : listaContas) {
 
@@ -53,10 +69,10 @@ public class Banco {
 			}
 		}
 
-		System.out.println("Conta não encontrada.");
+		System.out.println("Conta " + numeroConta + " não encontrada.");
 	}
 
-	public void realizarDeposito(int numeroConta, double valor) {
+	public void realizarDepositoConta(int numeroConta, double valor) {
 
 		for (ContaBancaria cb : listaContas) {
 
@@ -67,31 +83,16 @@ public class Banco {
 			}
 		}
 
-		System.out.println("Conta não encontrada.");
+		System.out.println("Conta " + numeroConta + " não encontrada.");
 	}
 
-	public void imprimirSaldoConta(int numeroConta) {
+	public void listarTodasContas() {
 
-		for (ContaBancaria cb : listaContas) {
+		for (int i = 0; i < this.listaContas.size(); i++) {
 
-			if (cb.getNumero() == numeroConta) {
+			ContaBancaria cb = this.listaContas.get(i);
 
-				System.out.println("CNPJ: " + this.cnpj);
-				System.out.println("Nome: " + this.nome);
-				
-				cb.imprimirSaldo();
-				return;
-			}
-		}
-
-		System.out.println("Conta não encontrada.");
-	}
-
-	public void listarContas() {
-
-		for (ContaBancaria contaBancaria : listaContas) {
-
-			contaBancaria.imprimirSaldo();
+			cb.imprimirSaldo();
 		}
 	}
 }

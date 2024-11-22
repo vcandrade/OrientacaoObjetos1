@@ -10,7 +10,7 @@ public class ContaBancaria {
 
 		this.numero = numero;
 		this.titular = titular;
-		this.saldo = 100.00;
+		this.saldo = 0.00;
 	}
 
 	public void sacar(double valor) {
@@ -42,10 +42,10 @@ public class ContaBancaria {
 
 	public void imprimirSaldo() {
 
-		System.out.println("===============================");
 		System.out.println("Número da Conta: " + this.numero);
 		System.out.println("Nome do Titular: " + this.titular);
 		System.out.println("Saldo: R$" + this.saldo);
+		System.out.println("===============================");
 	}
 
 	// métodos getters da classe ContaBancaria
