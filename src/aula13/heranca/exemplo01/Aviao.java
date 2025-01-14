@@ -15,3 +15,13 @@ public class Aviao extends Veiculo {
 		System.out.println(this.fabricante + " " + this.modelo + " está voando.");
 	}
 }
+
+
+
+
+
+
+
+
+
+

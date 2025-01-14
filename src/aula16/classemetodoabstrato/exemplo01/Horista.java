@@ -1,0 +1,29 @@
+package aula16.classemetodoabstrato.exemplo01;
+
+public class Horista extends Funcionario {
+
+	private double precoHora;
+	private int horasTrabalhadas;
+
+	public Horista(String nome, int cpf, double salarioBase, double precoHora, int horasTrabalhadas) {
+
+		super(nome, cpf, salarioBase);
+		this.precoHora = precoHora;
+		this.horasTrabalhadas = horasTrabalhadas;
+	}
+
+	public void imprimirDados() {
+
+		super.imprimirDados();
+
+		System.out.println("Total de Horas Trabalhadas: " + this.horasTrabalhadas);
+		System.out.println("Valor por Hora: R$" + this.precoHora);
+		System.out.println("Salário Total: R$" + this.calcularSalario());
+		System.out.println("===============================");
+	}
+
+	protected double calcularSalario() {
+
+		return this.salarioBase + (this.horasTrabalhadas * this.precoHora);
+	}
+}
