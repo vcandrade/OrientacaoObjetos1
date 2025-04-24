@@ -8,8 +8,8 @@ public class Carro {
 	int ano;
 	String placa;
 	String cor;
-	boolean ligado = false;
-	int velocidade = 0;
+	boolean ligado;
+	int velocidade;
 
 	// Métodos Construtores da Classe Carro
 	public Carro(String modelo, String marca, int ano, String placa, String cor) {
