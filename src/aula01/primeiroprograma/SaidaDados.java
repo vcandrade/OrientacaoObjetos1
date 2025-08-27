@@ -1,4 +1,4 @@
-package aula01;
+package aula01.primeiroprograma;
 
 public class SaidaDados {
 
