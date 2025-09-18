@@ -8,6 +8,9 @@ public class Carro {
 	int ano;
 	String placa;
 	String cor;
+	
+	int velocidade = 0;
+	boolean ligado = false;
 
 	// Métodos da classe Carro
 	public void ligar() {
@@ -16,12 +19,12 @@ public class Carro {
 	}
 
 	public void desligar() {
-
+		
 		System.out.println(marca + " " + modelo + " está desligando.");
 	}
 
 	public void acelerar() {
-
+		
 		System.out.println(marca + " " + modelo + " está acelerando.");
 	}
 
