@@ -1,9 +1,13 @@
 package aula03.classeobjeto;
 
+import java.util.Scanner;
+
 public class CarroTeste {
 
 	public static void main(String[] args) {
-
+		
+		Scanner input = new Scanner(System.in);
+		
 		// instanciando objetos da classe Carro
 		Carro carro1 = new Carro();
 		Carro carro2 = new Carro();
@@ -22,11 +26,22 @@ public class CarroTeste {
 		carro2.placa = "MNO-9876";
 		carro2.cor = "Azul";
 
-		carro3.modelo = "911 Carrera";
-		carro3.marca = "Porsche";
-		carro3.ano = 2018;
-		carro3.placa = "XYZ-1597";
-		carro3.cor = "Branco";
+		System.out.println("Informe o modelo do carro 3:");
+		carro3.modelo = input.nextLine();
+		
+		System.out.println("Informe a marca do carro 3:");		
+		carro3.marca = input.nextLine();
+		
+		System.out.println("Informe o ano do carro 3:");
+		carro3.ano = input.nextInt();
+		
+		input.nextLine();
+		
+		System.out.println("Informe a placa do carro 3:");
+		carro3.placa = input.nextLine();
+		
+		System.out.println("Informe a cor do carro 3:");
+		carro3.cor = input.nextLine();
 
 		// buscando os valores dos atributos dos objetos
 		System.out.println("Modelo: " + carro1.modelo);
