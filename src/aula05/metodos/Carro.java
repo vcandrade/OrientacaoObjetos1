@@ -30,23 +30,9 @@ public class Carro {
 		System.out.println(marca + " " + modelo + " está freando.");
 	}
 
-
+	@Override
 	public String toString() {
 		return "Carro [modelo=" + modelo + ", marca=" + marca + ", ano=" + ano + ", placa=" + placa + ", cor=" + cor
 				+ "]";
 	}
-	
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
