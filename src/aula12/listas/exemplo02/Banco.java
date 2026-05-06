@@ -44,6 +44,63 @@ public class Banco {
 		return false;
 	}
 
+	public void excluirConta(int numeroConta) {
+
+		for (ContaBancaria contaBancaria : this.listaContas) {
+
+			if (contaBancaria.getNumero() == numeroConta) {
+
+				this.listaContas.remove(contaBancaria);
+				System.out.println("Conta " + numeroConta + " removida com sucesso.");
+				return;
+			}
+		}
+
+		System.out.println("Conta " + numeroConta + " não encontrada.");
+	}
+
+	public void verificarSaldoConta(int numeroConta) {
+
+		for (ContaBancaria contaBancaria : listaContas) {
+
+			if (contaBancaria.getNumero() == numeroConta) {
+
+				contaBancaria.imprimirSaldo();
+				return;
+			}
+		}
+
+		System.out.println("Conta " + numeroConta + " não encontrada.");
+	}
+
+	public void realizarSaqueConta(int numeroConta, double valor) {
+
+		for (ContaBancaria contaBancaria : listaContas) {
+
+			if (contaBancaria.getNumero() == numeroConta) {
+
+				contaBancaria.sacar(valor);
+				return;
+			}
+		}
+
+		System.out.println("Conta " + numeroConta + " não encontrada.");
+	}
+
+	public void realizarDepositoConta(int numeroConta, double valor) {
+
+		for (ContaBancaria contaBancaria : listaContas) {
+
+			if (contaBancaria.getNumero() == numeroConta) {
+
+				contaBancaria.depositar(valor);
+				return;
+			}
+		}
+
+		System.out.println("Conta " + numeroConta + " não encontrada.");
+	}
+
 	public void listarContas() {
 
 		for (ContaBancaria contaBancaria : this.listaContas) {

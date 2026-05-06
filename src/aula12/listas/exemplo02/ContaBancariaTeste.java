@@ -10,6 +10,9 @@ public class ContaBancariaTeste {
 		banco1.adicionarNovaConta(222, "Maria de Oliveira");
 		banco1.adicionarNovaConta(333, "José Carvalho");
 
-		banco1.listarContas();
+		banco1.realizarDepositoConta(222, 100.00);
+		banco1.realizarSaqueConta(222, 70.00);
+
+		banco1.verificarSaldoConta(222);
 	}
 }
