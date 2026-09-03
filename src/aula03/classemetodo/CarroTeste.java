@@ -3,7 +3,7 @@ package aula03.classemetodo;
 public class CarroTeste {
 
 	public static void main(String[] args) {
-
+		
 		// instanciar objetos da classe Carro
 		Carro carro1 = new Carro();
 		Carro carro2 = new Carro();
