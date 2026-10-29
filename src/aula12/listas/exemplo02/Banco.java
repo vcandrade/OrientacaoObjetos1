@@ -25,7 +25,7 @@ public class Banco {
 			System.out.println("Conta " + numero + " existente.");
 			return;
 		}
-		
+
 		ContaBancaria cb = new ContaBancaria(numero, nomeTitular);
 		this.listaContas.add(cb);
 
@@ -34,9 +34,9 @@ public class Banco {
 
 	private boolean verificarExistenciaConta(int numeroConta) {
 
-		for (ContaBancaria contaBancaria : listaContas) {
+		for (ContaBancaria cb : listaContas) {
 
-			if (contaBancaria.getNumero() == numeroConta) {
+			if (cb.getNumero() == numeroConta) {
 
 				return true;
 			}
@@ -44,7 +44,78 @@ public class Banco {
 		return false;
 	}
 
+	public void excluirConta(int numero) {
+
+		for (ContaBancaria cb : listaContas) {
+			
+			if (cb.getNumero() == numero) {
+				
+				this.listaContas.remove(cb);
+				System.out.println("Conta " + numero + " foi removida.");
+				return;
+			}
+		}
+		
+		System.out.println("Conta " + numero + " não encontrada.");
+
+//		for (int i = 0; i < this.listaContas.size(); i++) {
+//			ContaBancaria cb = this.listaContas.get(i);
+//
+//			if (cb.getNumero() == numero) {
+//
+//				this.listaContas.remove(cb);
+//				System.out.println("Conta " + numero + " foi removida.");
+//				return;
+//			}
+//		}
+//
+//		System.out.println("Conta " + numero + " não encontrada.");
+	}
+	
+	public void verificarSaldoConta(int numero) {
+		
+		for (ContaBancaria cb : this.listaContas) {
+			
+			if (cb.getNumero() == numero) {
+				
+				cb.imprimirSaldo();
+				return;
+			}
+		}
+		System.out.println("Conta " + numero + " não encontrada.");
+	}
+	
+	public void realizarDepositoConta(int numero, double valor) {
+		
+		for (ContaBancaria cb : listaContas) {
+			
+			if (cb.getNumero() == numero) {
+				
+				cb.depositar(valor);
+				return;
+			}
+		}
+		
+		System.out.println("Conta " + numero + " não encontrada.");
+	}
+	
+	public void realizarSaqueConta(int numero, double valor) {
+		
+		for (ContaBancaria cb: listaContas) {
+			
+			if (cb.getNumero() == numero) {
+				
+				cb.sacar(valor);
+				return;
+			}
+		}
+		
+		System.out.println("Conta " + numero + " não encontrada.");
+	}
+
 	public void exibirContas() {
+
+		System.out.println("CONTAS CADASTRADAS");
 
 		for (ContaBancaria contaBancaria : listaContas) {
 
